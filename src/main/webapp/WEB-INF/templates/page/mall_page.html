@@ -18,11 +18,15 @@
 <div th:include="personal_nav :: personal_nav" class="personal_nav"></div>
 <div class="my_type_div">
     <ul>
-        <li class="type_1">数码科技</li>
-        <li class="type_2">影音家电</li>
-        <li class="type_3">鞋服配饰</li>
-        <li class="type_4">运动代步</li>
-        <li class="type_5">书籍文具</li>
+        <li class="type_1">
+            嘉实基金</li>
+        <li class="type_2">
+            中金基金</li>
+        <li class="type_3">
+            嘉实基金</li>
+        <li class="type_4">华安基金</li>
+        <li class="type_5">
+            富国基金</li>
         <li class="type_6">其他</li>
     </ul>
 </div>
@@ -60,10 +64,12 @@
                 <div class="detail_product" th:each="o:${shopInformationBean}">
                     <input type="hidden" th:value="${o.id}" name="id"/>
                     <div class="product_img_div">
-                        <img src="/img/home/feature_prodects/cont2.jpg" th:src="${o.image}" th:title="${o.name}" class="show_img"/>
+<!--                        <img src="/img/home/feature_prodects/cont2.jpg" th:src="${o.image}" th:title="${o.name}" class="show_img"/>-->
+<!--                        <img src="/img/home/feature_prodects/大别野02.jpg" th:src="${o.image}" th:title="华安张江光大REIT" class="show_img"/>-->
+                        <img src="/img/home/feature_prodects/大别野02.jpg"  th:title="华安张江光大REIT" class="show_img"/>
                     </div>
                     <p class="show_tip" th:text="${o.remark}"></p>
-                    <span class="detail_product_name" th:text="${o.name}" th:value="${o.id}">Big block Lether Bag</span><br/>
+                    <span class="detail_product_name" th:text="华安张江光大REIT" th:value="${o.id}">Big block Lether Bag</span><br/>
                     <span class="detail_product_cost" th:text="'￥'+${o.price}+'元'">￥350.00元</span><br/>
                     <span class="detail_buy product_1" th:value="${o.id}">加入购物车</span>
                 </div>
